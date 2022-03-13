@@ -8,7 +8,7 @@ phases:
     - apt install -y nodejs
 
     - echo "installing yarn through npm..."
-    - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+    - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
     - apt update
     - apt install --no-install-recommends yarn
     - echo "installed yarn..."

@@ -16,12 +16,12 @@ phases:
     # - yarn set version stable
     # - echo "installed yarn..."
     # - echo "Yarn version is:" yarn --version
+
   pre_build:
     commands:
       - echo "Yarn install dependencies..."
       - yarn install
       - echo "Done installing dependencies..."
-
 
   build:
     commands:
@@ -38,5 +38,5 @@ artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: dist
+  base-directory: build
     # - target/messageUtil-1.0.jar

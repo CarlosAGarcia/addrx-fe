@@ -8,14 +8,14 @@ phases:
     - apt install -y nodejs
 
     - echo "installing yarn ..."
-    - corepack enable
-    - yarn init -2
-    - yarn set version stable
-    # - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-    # - apt update
-    # - apt install --no-install-recommends yarn
-    - echo "installed yarn..."
-    - echo "Yarn version is:" yarn --version
+    - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+    - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+    - apt install --no-install-recommends yarn
+    # - corepack enable
+    # - yarn init -2
+    # - yarn set version stable
+    # - echo "installed yarn..."
+    # - echo "Yarn version is:" yarn --version
   pre_build:
     commands:
       - echo "Yarn install dependencies..."
@@ -25,9 +25,10 @@ phases:
 
   build:
     commands:
-      - echo "Build started on date ...""
-      - mvn install
-      - echo "Done mvn install..."
+      - echo Testing...
+      - yarn test
+      - echo Building...
+      - yarn build
 
   # post_build:
   #   commands:

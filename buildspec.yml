@@ -7,15 +7,19 @@ phases:
     - curl -fsSL https://deb.nodesource.com/setup_17.x | bash -
     - apt install -y nodejs
 
-    - echo "installing yarn through npm..."
-    - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-    - apt update
-    - apt install --no-install-recommends yarn
+    - echo "installing yarn ..."
+    - corepack enable
+    - yarn init -2
+    - yarn set version stable
+    # - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+    # - apt update
+    # - apt install --no-install-recommends yarn
     - echo "installed yarn..."
     - echo "Yarn version is:"
     - yarn --version
   pre_build:
     commands:
+      - echo "YARN ? ..."
       - yarn
 
   build:

@@ -5,7 +5,7 @@ export default class Main extends Component {
   render() {
     return (
     <StyledMain>
-        <div>MAIN PAGE HERE</div> 
+        <div>MAIN PAGE HERE - FUCK U</div> 
     </StyledMain>
     )
   }

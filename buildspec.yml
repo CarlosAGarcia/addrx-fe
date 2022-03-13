@@ -15,17 +15,20 @@ phases:
     # - apt update
     # - apt install --no-install-recommends yarn
     - echo "installed yarn..."
-    - echo "Yarn version is:"
-    - yarn --version
+    - echo "Yarn version is:" yarn --version
   pre_build:
     commands:
-      - echo "YARN ? ..."
-      - yarn
+      - echo "Yarn install dependencies..."
+      - yarn install
+      - echo "Done installing dependencies..."
+
 
   build:
     commands:
-      - echo Build started on `date`
+      - echo "Build started on date ...""
       - mvn install
+      - echo "Done mvn install..."
+
   # post_build:
   #   commands:
   #     - echo Build completed on `date`

@@ -30,9 +30,9 @@ phases:
       - echo Building...
       - yarn build
 
-  # post_build:
-  #   commands:
-  #     - echo Build completed on `date`
+  post_build:
+    commands:
+      - echo "Build completed on date "
   
 artifacts:
   files:

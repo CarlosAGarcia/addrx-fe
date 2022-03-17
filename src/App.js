@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import {
-  BrowserRouter as Router,
-  // Switch
-} from "react-router-dom";
+
+// import { Redirect, Route, Switch, withRouter } from 'react-router-dom'
+import { BrowserRouter } from "react-router-dom";
 import PublicRoutes from './Routes/publicRoutes'
 import { ThemeProvider } from 'styled-components'
 import { DARK, lightTheme, darkTheme } from './theme/theme'
 import StylingWrapper from './theme/stylingWrapper'
 
-class Routes extends Component {
+class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -20,23 +19,23 @@ class Routes extends Component {
     const { theme } = this.state
     return theme === DARK ? darkTheme : lightTheme
   }
+
   render() {
     const { theme } = this.state
+
+    console.log('props', this.props)
 
     return (
       <ThemeProvider theme={this.getTheme}>
           <StylingWrapper>
+            <BrowserRouter>
               <PublicRoutes theme={theme} />
+              
+            </BrowserRouter>
           </StylingWrapper>
       </ThemeProvider>
     )
   }
-}
-
-function App() {
-  return (
-    <Routes />
-  );
 }
 
 export default App;

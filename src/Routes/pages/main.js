@@ -1,12 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { useLocation } from "react-router-dom";
 import StyledMain from './styles/styledMain'
 
-export default class Main extends Component {
-  render() {
-    return (
+export default function Main() {
+  const { pathname } = useLocation()
+  console.log('pathname', pathname)
+  return (
     <StyledMain>
-        <div>MAIN PAGE HERE - FUCK U !</div> 
+      <div> - MAIN - </div> 
+      <div>{`pathname is - ${pathname}`}</div>
     </StyledMain>
-    )
-  }
-} 
+  )
+}
+

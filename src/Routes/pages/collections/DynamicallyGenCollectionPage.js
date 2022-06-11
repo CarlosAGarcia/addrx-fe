@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStore } from '../../../stores/subdomainStore'
+            
 
 
 /*
@@ -9,7 +10,9 @@ export default function DynamicallyGenCollectionPage() {
     const subdomain = useStore(state => state.subdomain)
 
     return (
-        <div>DynamicallyGenCollectionPage{subdomain}</div>
+        <div>
+
+        </div>
         
     )
 }

@@ -3,7 +3,7 @@ import LandingPage from './pages/LandingPage'
 import { Routes, Route } from "react-router-dom";
 import DynamicRoute from './pages/DynamicRoute'
 import Navbar from '../components/Navbar/Navbar'
-// Tain station! Routes chosen here :)
+// Tain station! choo choo! - Routes chosen here :)
 /*
 
                                              ______
@@ -29,7 +29,7 @@ export default class publicRoutes extends Component {
       <div>
         <Navbar/>
         <Routes>
-          <Route path="/intro" element={<LandingPage/>} />
+          <Route path="/" element={<LandingPage/>} />
           <Route path="*" element={<DynamicRoute/>} />
         </Routes>
       </div>

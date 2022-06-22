@@ -30,7 +30,6 @@ class App extends Component {
           <StylingWrapper>
             <BrowserRouter>
               <PublicRoutes theme={theme} />
-              
             </BrowserRouter>
           </StylingWrapper>
       </ThemeProvider>

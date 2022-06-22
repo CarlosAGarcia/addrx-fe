@@ -3,6 +3,6 @@ import ButtonConnectToWallet from '../wallet/ButtonConnectToWallet'
 
 export default function Navbar() {
   return (
-    <div><ButtonConnectToWallet/></div>
+    <div className='navBarContainer'><ButtonConnectToWallet/></div>
   )
 }

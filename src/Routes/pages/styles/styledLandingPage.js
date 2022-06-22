@@ -8,5 +8,4 @@ export default styled.div`
     min-width: 100vw;
     justify-content: center;
     align-items: center;
-
 `

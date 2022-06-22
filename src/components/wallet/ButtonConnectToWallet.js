@@ -13,12 +13,14 @@ export default function ButtonConnectToWallet() {
     const connectToWallet = async () => {
         // info: { chainId: number }
         const onSuccess = (provider) => {
+            console.log('setting provider', provider)
             setProvider(provider)
         }
 
         // error: { code: number; message: string }
         const onDisconnect = (error) => {
             if (error) onErr(error)
+            console.log('disconmecting provider')
             setWalletNull()
         }
 

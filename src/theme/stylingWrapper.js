@@ -2,7 +2,16 @@ import styled from 'styled-components'
 // common classnames that will be available to all children in routes
 
 const StylingWrapper = styled.div`
-
+display: flex;
+.bodyContainer {
+    position: relative;
+    .navBarContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
 html, body
 {
     height: 100%;

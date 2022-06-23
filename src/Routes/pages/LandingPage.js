@@ -7,7 +7,7 @@ export default function LandingPage() {
   return (
     <StyledLandingPage>
       <GradientBG>
-        <div> - MAIND - </div>
+        <div className='landingContainer yoshinoyaYellow'> - MAIN - </div>
       </GradientBG>
     </StyledLandingPage>
   )

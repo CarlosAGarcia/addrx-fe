@@ -34,17 +34,14 @@ html, body
     padding:0;
     width:100%;
     height:100%;
-    background-color: ${props => props.theme.primaryBackgroundColor};
     /* font-family: Formular-Light; */
     font-weight: normal;
     font-style: normal;
     scroll-behavior: smooth;
-    * {
-        color: ${props => props.theme.primaryTextColor};
-    }
 
     /* Theme dependent styles */
     .BG1{ background-color: ${props => props.theme.bg1} }
+    .yoshinoyaYellow { color: ${props => props.theme.yoshinoyaYellow} }
 
     /* Theme independent styles */
     /* MISC */

@@ -8,4 +8,11 @@ export default styled.div`
     min-width: 100vw;
     justify-content: center;
     align-items: center;
+    .landingContainer {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `

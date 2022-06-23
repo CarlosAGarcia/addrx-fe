@@ -7,6 +7,35 @@ export const LIGHT = 'LIGHT'
 const wakui = {
     dark1: '#1E2223',
     dark2: '#2F282A',
+    dark3: '#2B2029',
+    akibaSegaRed1: '#FEC56B',
+    akibaSegaRed2: '#E50735' ,
+    akibaSegaRed3: '#68182E',
+    akibaSegaBlue1: '#44A7AD',
+    akibaSegaBlue2: '#258291',
+    akibaBridge1: '#B59B68',
+    akibaBridge2: '#04664F' ,
+    akibaBridge3: '#192F2D',
+    yoshinoyaYellow: '#FBC525',
+    akibaStreetPurple1: '#B9735A',
+    akibaStreetPurple2: '#663744',
+    akibaStreetPurple3: '#372236' ,
+    akibaStreetPurple4: '#241F27',
+
+    skyShibuyaLightPollutionOrange: '#333432',
+    skyShibuyaLightPollutionBlue: '#21353C',
+    darkSkyShibuya: '#222723',
+    billboardInnerShibuya: '#EBF1CB',
+    billboardGreenOuterShibuya: '#55D887',
+    billboardBlueInnerShibuya: '#EBF0C2',
+    billboardBlueOuterShibuya: '#268991',
+    shibuyaCrossingLineWhite1: '#DFD4A9',
+    shibuyaCrossingLineWhite2: '#CC9F87',
+    shibuyaCrossingLineWhite3: '#A67B74',
+    shibuyaCrossingLineWhite4: '#56505B',
+    shibuyaCrossingLineWhite5: '#314450',
+    shibuyaCrossingLineWhite6: '#182E36',
+    blackMensSuit: '#262923',
     blue1: '#52B18D',
     blue2: '#75C29A',
     blue3: '#F9F2B6',
@@ -25,8 +54,8 @@ const ethColours = {
 }
 
 const commonColours = {
-    ethColours,
-    wakui
+    ...ethColours,
+    ...wakui
 }
 
 export const darkTheme = {

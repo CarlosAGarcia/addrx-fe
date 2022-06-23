@@ -9,11 +9,10 @@ const StyledGradientBG = styled.div`
     ` : `
         background: radial-gradient(#EBF0C2, #268991, #21353C, #222723);
     `}
-
+    background-size: 500% 500%;
     ${({ isAnimationDisabled }) => !isAnimationDisabled &&
         `
-            background-size: 400% 400%;
-            animation: gradient 30s ease infinite;
+            animation: gradient 120s ease infinite;
         `
     };
     
@@ -21,36 +20,38 @@ const StyledGradientBG = styled.div`
     width: 100%;
 
     @keyframes gradient {
-        ${({ gradientAnimation }) => gradientAnimation ? `
-            ${ gradientAnimation }
-        `:
-            `0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 100%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }`
+        0% {
+		    background-position: 0% 0%;
         }
-    }   
+        8% {
+            background-position: 10% 10%;
+        }
+        12.5% {
+            background-position: 13% 25%;
+        }
+        16% {
+            background-position: 10% 40%;
+        }
+        25% {
+            background-position: 0% 100%;
+        }
+        35% {
+            background-position: 20% 100%;
+        }
+        50% {
+            background-position: 100% 100%;
+        }
+        75% {
+            background-position: 100% 0%;
+        }
+        100% {
+            background-position: 0% 0%;
+        }
+    }  
 `
 
 export default function GradientBG(props) {
     const { customBackgroundGradient, isAnimationDisabled = false, customAnimation } = props
-    // const [ gradientAnimation ] = useState(() => {
-    //     let stages = 3 + Math.floor(Math.random() * 3)
-    //     let animation = ` 0% {
-
-    //     }`
-    //     for ()
-    //     return `
-
-    //     `
-    // })
-
-
 
     return (
         <StyledGradientBG customBackgroundGradient={customBackgroundGradient} isAnimationDisabled={isAnimationDisabled} customAnimation={customAnimation}>

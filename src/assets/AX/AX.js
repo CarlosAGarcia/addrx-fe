@@ -1,6 +1,6 @@
-
 import React from 'react'
 import styled from 'styled-components'
+
 const AXStyle = styled.div`
   position: relative;
   min-width: 10rem;
@@ -19,6 +19,7 @@ const AXStyle = styled.div`
     margin-left: -74px;
   }
 `
+
 const AX = ({ className, onClick, customTitle }) => {
   const title = customTitle ?? 'CLICK TO SHOW PASSWORD'
   return (

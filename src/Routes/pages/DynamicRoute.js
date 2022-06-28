@@ -4,13 +4,18 @@ import StyleDynamicRoute from './styles/StyleDynamicRoute.style'
 import { useStore } from '../../stores/subdomainStore'
 import DynamicallyGenCollectionPage from './collections/DynamicallyGenCollectionPage'
 import { useLazyQuery } from '@apollo/client';
-import { GET_PRICE } from '../../graphQL/NFTDetails'
-// import { getNFTDetails } from '../../Actions/Addresses/Addresses'
-
+import { GET_DETAILS } from '../../graphQL/NFTDetails'
 
 export default function DynamicRoute() {
-    const [ get, { loading, error, data }] = useLazyQuery(GET_PRICE)
-    console.log({ loading, error, data })
+    const address = window?.location?.pathname?.split('/')[1]
+
+    console.log({ address })
+
+    const [ get, { loading, error, data }] = useLazyQuery(GET_DETAILS, {
+      variables: { address },
+    });
+  
+    console.log({ get, loading, error, data })
 
     const { pathname } = useLocation()
     const setSubdomain = useStore(state => state.setSubdomain)
@@ -22,7 +27,7 @@ export default function DynamicRoute() {
           console.log('UPDATING SUBDOMAIN to', pathname)
           get()
         }
-    }, [pathname, setSubdomain, subdomain])
+    }, [ get, pathname, setSubdomain, subdomain ])
 
     console.log('subdomain ->', subdomain)
 

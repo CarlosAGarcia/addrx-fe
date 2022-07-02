@@ -17,6 +17,26 @@ query Query($address: String!) {
     token_address
     contract_type
     synced_at
+    holders {
+      cursor
+      page
+      page_size
+      status
+      total
+      result {
+        name,
+        symbol
+        token_address
+        contract_type
+        synced_at
+        token_id
+        block_number
+        block_number_minted
+        token_uri
+        metadata
+        amount
+      }
+    }
   }
 }
 `

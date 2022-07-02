@@ -8,14 +8,9 @@ import { GET_DETAILS } from '../../graphQL/NFTDetails'
 
 export default function DynamicRoute() {
     const address = window?.location?.pathname?.split('/')[1]
-
-    console.log({ address })
-
-    const [ get, { loading, error, data }] = useLazyQuery(GET_DETAILS, {
-      variables: { address },
-    });
+    const [ get, { loading, error, data }] = useLazyQuery(GET_DETAILS, { variables: { address } });
   
-    console.log({ get, loading, error, data })
+    console.log({ address, get, loading, error, data })
 
     const { pathname } = useLocation()
     const setSubdomain = useStore(state => state.setSubdomain)
@@ -35,7 +30,7 @@ export default function DynamicRoute() {
       <StyleDynamicRoute>
         <div className='dynamicRouteContainer'>
           <div className='subdomainText'>{`subdomain is - ${subdomain}`}</div>
-          <DynamicallyGenCollectionPage/>
+          <DynamicallyGenCollectionPage loading={loading} error={error} data={data}/>
         </div>
     </StyleDynamicRoute>
   )
